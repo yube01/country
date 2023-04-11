@@ -1,7 +1,7 @@
 <template>
-<pre>
-  {{ meals }}
-</pre>
+<div class="flex justify-center p-8">
+  <input type="text" class="rounded border-2 border-gray-200">
+</div>
 </template>
 
 <script setup>
