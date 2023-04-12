@@ -13,10 +13,14 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
-import store from '../store';
+import { onMounted } from 'vue';
+
+import axiosClient from '../axiosClient';
 
 const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split("")
+onMounted(async() => {
+  const response = await axiosClient.get('/countries')
+  console.log(response.data)
 
-const meals =computed(()=> store.state.meals)
+})
 </script>
