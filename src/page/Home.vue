@@ -19,8 +19,11 @@ import axiosClient from '../axiosClient';
 
 const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split("")
 onMounted(async() => {
-  const response = await axiosClient.get('/countries')
+  const response = await axiosClient.get('/list.php?c=list')
+  
   console.log(response.data)
+
+  
 
 })
 </script>
