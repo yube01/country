@@ -4,7 +4,23 @@
 
 <template>
   
-<router-view />
+<div class="bg-gray-100 h-full">
+  <header class="bg-white shadow h-16">
+
+    <router-link :to="{name:'home'}">
+        Home
+    </router-link>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+
+  </header>
+  <main>
+    <router-view />
+  </main>
+</div>
 
 </template>
 
