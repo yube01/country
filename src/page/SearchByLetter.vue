@@ -1,9 +1,6 @@
 <template>
-<div>
-  list
-</div>
+  By Letter
 </template>
 
-<script>
-
+<script setup>
 </script>
