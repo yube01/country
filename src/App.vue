@@ -4,10 +4,7 @@
 
 <template>
   
-<div class="bg-gray-100 h-full">
-  
-  <router-view/>
-</div>
+<router-view/>
 
 </template>
 

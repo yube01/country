@@ -4,6 +4,7 @@ import SearchByLetter from "../page/SearchByLetter.vue";
 import SearchByNames from "../page/SearchByNames.vue";
 import SearchByIngredients from "../page/SearchByIngredients.vue";
 import DefaultLayout from "../components/DefaultLayout.vue";
+import GuestLayout from "../components/GuestLayout.vue";
 const routes = [
   {
     path: "/",
@@ -31,6 +32,10 @@ const routes = [
         component: SearchByIngredients,
       },
     ],
+  },
+  {
+    path: "/auth",
+    component: GuestLayout,
   },
 ];
 
