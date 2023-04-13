@@ -21,5 +21,11 @@ const meals = computed(()=> store.state.searchedMeals)
 
 
 const keyword = ref('')
-store.dispatch("searchedMeals",keyword.value)
+function searchMeals() {
+  if (keyword.value) {
+    store.dispatch("searchMeals", keyword.value);
+  } else {
+    store.commit("setSearchedMeals", []);
+  }
+}
 </script>
