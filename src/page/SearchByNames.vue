@@ -5,15 +5,20 @@
     @change="searchMeals"
     class="rounded border-2 border-gray-200 w-full" placeholder="Search for meals">
   </div>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-5">
-    <div v-for="meal of meals" :key="meal.idMeal">
-      <img :src="meal.strMealThumb" :alt="strMeal">
-      <h3>{{ meal.strMeal }}</h3>
-      <div>
-        <a :href="meal.strYoutube" target="_blank"> Youtube</a>
-        <router-link to="/" >
-          view
-        </router-link>
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-5 p-5">
+    <div v-for="meal of meals" :key="meal.idMeal" class="bg-white shadow rounded-xl">
+      <router-link to="">
+        <img :src="meal.strMealThumb" :alt="strMeal" class="rounded-t-xl w-full h-48 object-cover">
+      </router-link>
+      <div class="p-5">
+        <h3 class=" font-semibold">{{ meal.strMeal }}</h3>
+        <p class="mb-4">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, modi.
+        </p>
+        <div class="flex items-center justify-between">
+          <a :href="meal.strYoutube" target="_blank" class="px-3 py-2 rounded border-red-600-2 bg-red-600 hover:bg-red-500 text-white transition-colors"> Youtube</a>
+         
+        </div>
       </div>
     </div>
   </div>
