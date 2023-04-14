@@ -25,14 +25,14 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref,onMounted } from 'vue';
 
 import store from "../store"
 import { computed } from '@vue/reactivity';
-
+import { useRoute } from "vue-router"
 
 const meals = computed(()=> store.state.searchedMeals)
-
+const route = useRoute()
 
 const keyword = ref('')
 function searchMeals() {
@@ -42,4 +42,10 @@ function searchMeals() {
     store.commit("setSearchedMeals", []);
   }
 }
+onMounted(() => {
+  keyword.value = route.params.name
+  if (keyword.value) {
+    searchMeals()
+  }
+})
 </script>
