@@ -1,6 +1,13 @@
 <template>
   <div>
-    <pre>{{ meal }}</pre>
+    
+    <h1>{{ meal.strMeal }}</h1>
+    <img :src="meal.strMealThumb" :alt="meal.strMeal">
+
+    <div>
+      Category:{{ meal.strCategory }}
+    </div>
+    
   </div>
 </template>
 
