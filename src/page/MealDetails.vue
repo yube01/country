@@ -15,6 +15,25 @@
          <strong class="font-bold">Tags:</strong> {{ meal.strTags }}
         </div>
    </div>
+   <div class="grid grid-cols-1 md:grid-cols-2">
+    <div>
+      <h2 class="text-2xl font-semibold mb-2">
+            Ingredients
+      </h2>
+      <ul>
+        <template v-for="(el,ind) of new Array (20)" >
+          <li v-if="meal[`strIngredient${ind +1 }`]">
+            {{ ind + 1 }}.{{ meal[`strIngredient${ind+1}`] }}
+
+          </li>
+        </template>
+      </ul>
+    </div>
+    <div class="text-2xl font-semibold mb-2">
+      <h2>Measures</h2>
+    </div>
+
+   </div>
     
   </div>
 </template>
