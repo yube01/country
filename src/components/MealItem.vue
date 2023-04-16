@@ -13,7 +13,7 @@
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, modi.
       </p>
       <div class="flex items-center justify-between">
-        <YouTube :href="meal.strYoutube"> YouTube </YouTube>
+        <YouTube :href="meal.strYouTube"> YouTube </YouTube>
       </div>
     </div>
   </div>
@@ -21,6 +21,7 @@
 
 <script setup>
 import { object } from "prop-types";
+import YouTube from "./YouTube.vue";
 
 const { meal } = defineProps({
   meal: object,
