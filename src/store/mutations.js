@@ -3,7 +3,7 @@ export function setSearchedMeals(state, meals) {
 }
 
 export function setMealsByLetter(state, meals) {
-  state.mealsByLetter = meals || [];
+  state.searchMealsByLetter = meals || [];
 }
 
 export function setMealsByIngredient(state, meals) {

@@ -8,8 +8,20 @@
       {{ letter }}
     </router-link>
   </div>
+  {{ meals }}
 </template>
 
 <script setup>
+import { computed } from "@vue/reactivity";
+import { onMounted } from "vue";
+import { useRoute } from "vue-router";
+import store from "../store";
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+const route = useRoute();
+const meals = computed(() => {
+  store.store.searchMealsByLetter;
+});
+onMounted(() => {
+  store.dispatch("searchMealsByLetter", route.params.letter);
+});
 </script>
