@@ -29,7 +29,7 @@ const routes = [
         component: SearchByNames,
       },
       {
-        path: "/by-ingredient/:ingredients?",
+        path: "/by-ingredient/:ingredient?",
         name: "byIngredient",
         component: SearchByIngredients,
       },
