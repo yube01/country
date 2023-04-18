@@ -1,6 +1,6 @@
 <template>
   <div class="bg-gray-100 h-full">
-  <Navbar/>
+    <Navbar />
     <main>
       <router-view />
     </main>
@@ -8,5 +8,5 @@
 </template>
 
 <script setup>
-import Navbar from "../components/Navbar.vue"
+import Navbar from "../components/Navbar.vue";
 </script>
