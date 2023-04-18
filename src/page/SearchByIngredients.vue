@@ -16,6 +16,8 @@ import { computed } from "@vue/reactivity";
 import store from "../store";
 import { useRoute } from "vue-router";
 
+const meals = computed(() => store.state.mealsByIngredient);
+
 const route = useRoute();
 const ingredient = computed(() => store.state.ingredient);
 
