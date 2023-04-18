@@ -5,7 +5,7 @@
     </h1>
   </div>
 
-  <Meals :meals="meals" />
+  <!-- <Meals :meals="meals" /> -->
 </template>
 
 <script setup>
@@ -18,9 +18,6 @@ import { useRoute } from "vue-router";
 
 const route = useRoute();
 const ingredient = computed(() => store.state.ingredient);
-const meals = computed(() => {
-  store.state.mealsByIngredient;
-});
 
 onMounted(() => {
   store.dispatch("searchMealsByIngredient", route.params.ingredient);
