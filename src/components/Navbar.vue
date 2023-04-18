@@ -20,12 +20,12 @@
       >
         Search Meals by letters
       </router-link>
-      <router-link
+      <!-- <router-link
         :to="{ name: 'ingredients' }"
         class="inline-flex items-center px-2 h-full transition-colors hover:bg-purple-100"
       >
         Meals by Ingredients
-      </router-link>
+      </router-link> -->
     </div>
   </header>
 </template>
