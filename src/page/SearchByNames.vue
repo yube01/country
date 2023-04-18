@@ -8,9 +8,8 @@
       placeholder="Search for meals"
     />
   </div>
-  <div class="grid grid-cols-1 md:grid-cols-4 gap-5 p-5">
-    <MealItems v-for="meal of meals" :key="meal.idMeal" :meal="meal" />
-  </div>
+
+  <Meals :meals="meals" />
 </template>
 
 <script setup>
@@ -19,7 +18,7 @@ import { ref, onMounted } from "vue";
 import store from "../store";
 import { computed } from "@vue/reactivity";
 import { useRoute } from "vue-router";
-import MealItems from "../components/MealItem.vue";
+import Meals from "../components/Meals.vue";
 
 const meals = computed(() => store.state.searchedMeals);
 const route = useRoute();
