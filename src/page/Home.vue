@@ -3,7 +3,7 @@
     <input
       type="text"
       class="rounded border-2 border-gray-200 w-full"
-      placeholder="Search for country"
+      placeholder="Search for meals"
     />
 
     <!-- <pre>{{ ingredients }}</pre> -->
